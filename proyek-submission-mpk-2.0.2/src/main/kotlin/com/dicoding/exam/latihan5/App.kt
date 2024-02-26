@@ -41,7 +41,7 @@ suspend fun sum(valueA: Int, valueB: Int): Int {
  */
 suspend fun multiple(valueA: Int, valueB: Int): Int {
     delay(2000)
-    return valueA + valueB
+    return valueA * valueB
 }
 
 fun main() = runBlocking {
@@ -53,7 +53,7 @@ fun main() = runBlocking {
     println(
         """
             Result sum: ${resultSum.await()}
-            Result multiple: ${resultMultiple.await()}" 
+            Result multiple: ${resultMultiple.await()}
         """.trimIndent()
     )
 }
